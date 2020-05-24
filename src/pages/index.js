@@ -6,7 +6,10 @@ import SEO from "../components/seo"
 
 import Logo from "../images/t4h-logo.png"
 
+import "../components/clear.css"
+
 const Container = styled.div`
+  width: 100%;
   max-height: 100vh;
   margin: 0;
 
