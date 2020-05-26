@@ -1,31 +1,105 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
-import SvgImagemap from "../components/Imagemap"
 import SEO from "../components/seo"
-
-import Logo from "../images/t4h-logo.png"
+import Layout from "../components/layout"
 
 import "../components/clear.css"
 
 const Container = styled.div`
-  width: 100%;
-  max-height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  align-content: center;
+  place-items: center;
+  width: 90%;
+  min-height: 80vh;
+  position: relative;
   margin: 0;
-
-  .logo {
-    position: absolute;
-    top: 30px;
-    left: 20px;
+  color: #fbc707;
+  @media (max-width: 500px) {
+    grid-template-columns: auto;
+    padding-bottom: 3rem;
   }
 `
 
+const Headline = styled.h2`
+  grid-row: 1;
+  grid-column: 2;
+  font-size: 3rem;
+  font-weight: 300;
+  align-self: center;
+  padding-bottom: 2rem;
+`
+
+const BodyText = styled.p`
+  grid-row: 2;
+  grid-column: 2;
+  font-weight: 100;
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+`
+
+const CTA = styled.h3`
+  grid-row: 3;
+  grid-column: 2;
+  font-weight: 700;
+  font-size: 3rem;
+`
+
+const CTAButton = styled.button`
+  grid-row: 4;
+  grid-column: 2;
+  font-weight: 700;
+  font-size: 2rem;
+  background-color: #ffffff00;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 0;
+  border: 1px solid #fbc707;
+  border-radius: 20px;
+
+  :hover,
+  :focus {
+    background: whitesmoke;
+  }
+
+  :focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+  }
+
+  :active {
+    transform: scale(0.99);
+  }
+`
+
+const LinkStyled = styled(Link)`
+  color: #fbc707;
+  text-decoration: none;
+`
+
 const IndexPage = () => (
-  <Container>
+  <Layout>
     <SEO title="token4hope" />
-    <img src={Logo} className="logo" hr />
-    <SvgImagemap />
-  </Container>
+    <Container>
+      <Headline>
+        Das erste transparente Spenden- und Impact Tracking-System
+      </Headline>
+      <BodyText>
+        Token4Hope greift das Problem fehlender Transparenz und
+        Nachverfolgbarkeit von Spenden auf und garantiert die sachgemäße
+        Verwendung des Geldes zu dessen vorgesehenen Zweck.
+      </BodyText>
+      <CTA>KNOW & SHOW YOUR IMPACT</CTA>
+
+      <CTAButton>
+        <LinkStyled to="/kontakt">Kontakt aufnehmen</LinkStyled>
+      </CTAButton>
+    </Container>
+  </Layout>
 )
 
 export default IndexPage
