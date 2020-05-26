@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { isMobile } from "react-device-detect"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -111,7 +112,11 @@ const Kontakt = props => (
         persönliche Anfrage
       </BodyText>
       <MailSpan>
-        <img src={MailImage} alt="email" height="20px" />
+        {isMobile ? (
+          <img src={MailImage} alt="email" height="20px" />
+        ) : (
+          <img src={MailImage} alt="email" height="40px" />
+        )}
         <LinkStyled href="mailto:office@collective-energy.at">
           office@collective-energy.at
         </LinkStyled>
