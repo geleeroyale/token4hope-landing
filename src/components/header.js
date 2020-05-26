@@ -19,10 +19,10 @@ const HeaderContainer = styled.div`
   }
 
   @media (max-width: 500px) {
-    grid-template-columns: 40px 40px auto;
-    grid-gap: 0.5rem;
+    grid-template-columns: 80px 65px auto;
+    grid-gap: 0rem;
     img {
-      padding: 0.1rem;
+      padding: 0rem;
     }
   }
 `
@@ -34,6 +34,17 @@ const LinkStyled = styled(Link)`
   justify-content: right;
   grid-column: 5;
   padding: 1rem;
+`
+const SiteTitleStyled = styled(Link)`
+  color: #cacbcd;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  @media (max-width: 500px) {
+    font-size: 1rem;
+    margin-left: 0px;
+  }
 `
 
 const Header = ({ siteTitle }) => (
@@ -58,26 +69,26 @@ const Header = ({ siteTitle }) => (
             height="65px"
           />
           <h1 style={{ margin: 0 }}>
-            <Link
+            <SiteTitleStyled
               to="/"
               style={{
                 color: `#CACBCD`,
                 fontWeight: `700`,
                 textDecoration: `none`,
                 textTransform: `uppercase`,
-                marginLeft: `2rem`,
+                marginLeft: `1rem`,
               }}
             >
               {siteTitle}
-            </Link>
+            </SiteTitleStyled>
           </h1>
           <LinkStyled to="/kontakt">Kontakt</LinkStyled>
         </HeaderContainer>
       </BrowserView>
       <MobileView>
         <HeaderContainer>
-          <img src={HeaderT4HLogo} alt="Token4Hope Logo" height="30px" />
-          <img src={HilfswerkLogo} alt="Hilfswerk Logo" height="30px" />
+          <img src={HeaderT4HLogo} alt="Token4Hope Logo" width="40px" />
+          <img src={HilfswerkLogo} alt="Hilfswerk Logo" width="30px" />
           <h1 style={{ margin: 0 }}>
             <Link
               to="/"
