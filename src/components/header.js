@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { isMobile, BrowserView, MobileView } from "react-device-detect"
+import { isMobile } from "react-device-detect"
 
 import HeaderT4HLogo from "../images/header-t4h-logo.svg"
 import HilfswerkLogo from "../images/header-hilfswerk-logo.svg"
