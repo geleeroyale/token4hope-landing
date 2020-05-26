@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { BrowserView, MobileView } from "react-device-detect"
+import { isMobile, BrowserView, MobileView } from "react-device-detect"
 
 import HeaderT4HLogo from "../images/header-t4h-logo.svg"
 import HilfswerkLogo from "../images/header-hilfswerk-logo.svg"
@@ -54,57 +54,43 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <span>
-      <BrowserView>
-        <HeaderContainer>
+      <HeaderContainer>
+        {isMobile ? (
+          <img src={HeaderT4HLogo} alt="Token4Hope Logo" width="40px" />
+        ) : (
           <img
             src={HeaderT4HLogo}
             alt="Token4Hope Logo"
             width="80px"
             height="65px"
           />
+        )}
+        {isMobile ? (
+          <img src={HilfswerkLogo} alt="Hilfswerk Logo" width="30px" />
+        ) : (
           <img
             src={HilfswerkLogo}
             alt="Hilfswerk Logo"
             width="65px"
             height="65px"
           />
-          <h1 style={{ margin: 0 }}>
-            <SiteTitleStyled
-              to="/"
-              style={{
-                color: `#CACBCD`,
-                fontWeight: `700`,
-                textDecoration: `none`,
-                textTransform: `uppercase`,
-                marginLeft: `1rem`,
-              }}
-            >
-              {siteTitle}
-            </SiteTitleStyled>
-          </h1>
-          <LinkStyled to="/kontakt">Kontakt</LinkStyled>
-        </HeaderContainer>
-      </BrowserView>
-      <MobileView>
-        <HeaderContainer>
-          <img src={HeaderT4HLogo} alt="Token4Hope Logo" width="40px" />
-          <img src={HilfswerkLogo} alt="Hilfswerk Logo" width="30px" />
-          <h1 style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                color: `#CACBCD`,
-                fontWeight: `700`,
-                textDecoration: `none`,
-                textTransform: `uppercase`,
-                marginLeft: `0.5rem`,
-              }}
-            >
-              {siteTitle}
-            </Link>
-          </h1>
-        </HeaderContainer>
-      </MobileView>
+        )}
+        <h1 style={{ margin: 0 }}>
+          <SiteTitleStyled
+            to="/"
+            style={{
+              color: `#CACBCD`,
+              fontWeight: `700`,
+              textDecoration: `none`,
+              textTransform: `uppercase`,
+              marginLeft: `1rem`,
+            }}
+          >
+            {siteTitle}
+          </SiteTitleStyled>
+        </h1>
+        {isMobile ? null : <LinkStyled to="/kontakt">Kontakt</LinkStyled>}
+      </HeaderContainer>
     </span>
     <hr />
   </header>
