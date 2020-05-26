@@ -87,8 +87,8 @@ const Layout = ({ children }) => {
           maxWidth: 960,
         }}
       >
-        <main>{children}</main>
         <FingersImage src={Fingers} />
+        <main>{children}</main>
       </div>
       <Footer>
         <FooterContent>
