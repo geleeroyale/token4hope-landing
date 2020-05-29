@@ -28,6 +28,7 @@ const FingersImage = styled.img`
   position: absolute;
   bottom: 0px;
   right: 0px;
+  max-height: 70vh;
 
   @media (max-width: 500px) {
     display: none;
