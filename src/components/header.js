@@ -5,7 +5,6 @@ import styled from "@emotion/styled"
 import { isMobile } from "react-device-detect"
 
 import HeaderT4HLogo from "../images/header-t4h-logo.svg"
-import HilfswerkLogo from "../images/header-hilfswerk-logo.svg"
 
 const HeaderContainer = styled.div`
   display: grid;
@@ -55,17 +54,18 @@ const Header = ({ siteTitle }) => (
   >
     <span>
       <HeaderContainer>
-        {isMobile ? (
-          <img src={HeaderT4HLogo} alt="Token4Hope Logo" width="40px" />
-        ) : (
-          <img
-            src={HeaderT4HLogo}
-            alt="Token4Hope Logo"
-            width="80px"
-            height="65px"
-          />
-        )}
-        {isMobile ? (
+        <Link to="/">
+          {isMobile ? (
+            <img src={HeaderT4HLogo} alt="Token4Hope Logo" width="40px" />
+          ) : (
+            <img
+              src={HeaderT4HLogo}
+              alt="Token4Hope Logo"
+              width="80px"
+              height="65px"
+            />
+          )}
+          {/**isMobile ? (
           <img src={HilfswerkLogo} alt="Hilfswerk Logo" width="30px" />
         ) : (
           <img
@@ -74,7 +74,8 @@ const Header = ({ siteTitle }) => (
             width="65px"
             height="65px"
           />
-        )}
+        )**/}
+        </Link>
         <h1 style={{ margin: 0 }}>
           <SiteTitleStyled
             to="/"
@@ -89,7 +90,9 @@ const Header = ({ siteTitle }) => (
             {siteTitle}
           </SiteTitleStyled>
         </h1>
-        {isMobile ? null : <LinkStyled to="/kontakt">Kontakt</LinkStyled>}
+        {isMobile !== "Kontakt" ? null : (
+          <LinkStyled to="/kontakt">Kontakt</LinkStyled>
+        )}
       </HeaderContainer>
     </span>
     <hr />
