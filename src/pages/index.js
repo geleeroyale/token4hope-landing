@@ -15,7 +15,7 @@ const Container = styled.div`
   align-content: center;
   place-items: center;
   width: 90%;
-  min-height: 80vh;
+  min-height: 75vh;
   position: relative;
   margin: 0;
   color: #fbc707;

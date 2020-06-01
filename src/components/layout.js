@@ -21,9 +21,9 @@ const Global = styled.div`
   background-color: black;
   background-image: url("${CanvasTexture}");
   background-size: cover;
-  min-height: 100vh;
   z-index: 1;
   position: relative;
+  min-height: 100vh;
 `
 
 const FingersImage = styled.img`
@@ -40,11 +40,10 @@ const FingersImage = styled.img`
 `
 
 const Footer = styled.footer`
-  min-height: 80px;
+  min-height: 10vh;
   text-align: center;
   color: #fbc707;
   background-color: #000000aa;
-  bottom: 0px;
   position: relative;
   z-index: 3;
   @media (max-width: 500px) {
