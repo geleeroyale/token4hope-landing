@@ -15,13 +15,14 @@ const HeaderContainer = styled.div`
 
   img {
     padding: 1.5rem;
+    vertical-align: middle;
   }
 
   @media (max-width: 500px) {
     grid-template-columns: 80px 65px auto;
     grid-gap: 0rem;
     img {
-      padding: 0rem;
+      padding: 0.5rem;
     }
   }
 `
@@ -40,6 +41,7 @@ const SiteTitleStyled = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 1rem;
+  vertical-align: middle;
   @media (max-width: 500px) {
     font-size: 1rem;
     margin-left: 0px;

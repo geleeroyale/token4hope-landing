@@ -22,6 +22,8 @@ const Global = styled.div`
   background-image: url("${CanvasTexture}");
   background-size: cover;
   min-height: 100vh;
+  z-index: 1;
+  position: relative;
 `
 
 const FingersImage = styled.img`
@@ -29,6 +31,8 @@ const FingersImage = styled.img`
   bottom: 0px;
   right: 0px;
   max-height: 70vh;
+  max-width: 30vw;
+  z-index: 2;
 
   @media (max-width: 500px) {
     display: none;
@@ -40,11 +44,10 @@ const Footer = styled.footer`
   text-align: center;
   color: #fbc707;
   background-color: #000000aa;
-  position: absolute;
   bottom: 0px;
-  width: 100vw;
+  position: relative;
+  z-index: 3;
   @media (max-width: 500px) {
-    position: inherit;
   }
 `
 const FooterContent = styled.div`
@@ -68,6 +71,11 @@ const AWS = styled.img`
   border-radius: 50px;
 `
 
+const Content = styled.main`
+  position: relative;
+  z-index: 100;
+`
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -89,7 +97,7 @@ const Layout = ({ children }) => {
         }}
       >
         <FingersImage src={Fingers} />
-        <main>{children}</main>
+        <Content>{children}</Content>
       </div>
       <Footer>
         <FooterContent>
