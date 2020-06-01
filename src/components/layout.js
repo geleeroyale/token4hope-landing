@@ -46,6 +46,8 @@ const Footer = styled.footer`
   background-color: #000000aa;
   position: relative;
   z-index: 3;
+  place-content: center;
+  display: flex;
   @media (max-width: 500px) {
   }
 `
