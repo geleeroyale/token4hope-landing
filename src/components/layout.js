@@ -34,7 +34,7 @@ const FingersImage = styled.img`
   max-width: 30vw;
   z-index: 2;
 
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     display: none;
   }
 `
@@ -48,21 +48,44 @@ const Footer = styled.footer`
   z-index: 3;
   place-content: center;
   display: flex;
-  @media (max-width: 500px) {
+  flex-wrap: wrap;
+  max-width: 100vw;
+  @media (max-width: 650px) {
+    position: static;
+    flex-flow: column wrap;
+    place-content: flex-start;
   }
 `
 const FooterContent = styled.div`
   padding: 0.5rem;
   display: inline-grid;
+  grid-template-columns: auto auto;
   align-items: center;
+  @media (max-width: 650px) {
+    grid-template-columns: auto;
+  }
 
+  & .footer-ce {
+    @media (max-width: 650px) {
+      align-self: stretch;
+    }
+  }
+
+  & .footer-aws {
+    @media (max-width: 650px) {
+      align-self: stretch;
+    }
+  }
   span {
     padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
     img {
       padding: 0.5rem;
     }
     a {
-      vertical-align: middle;
+      padding: 0rem 0.5rem;
     }
   }
 `
@@ -102,9 +125,11 @@ const Layout = ({ children }) => {
       </div>
       <Footer>
         <FooterContent>
-          <span>
-            © {new Date().getFullYear()}, Ein Projekt von
-            {` `}
+          <span className="footer-ce">
+            <div>
+              © {new Date().getFullYear()}, Ein Projekt von
+              {` `}
+            </div>
             <a href="https://www.collective-energy.at" target="blank">
               <img
                 src={CollectiveEnergyLogo}
@@ -112,8 +137,12 @@ const Layout = ({ children }) => {
                 height="30px"
               />
             </a>
-            - Die Umsetzung erfolgt in Zusammenarbeit mit dem aws: Austria
-            Wirtschaftsservice{` `}
+          </span>
+          <span className="footer-aws">
+            <div>
+              Die Umsetzung erfolgt in Zusammenarbeit mit dem aws: Austria
+              Wirtschaftsservice{` `}
+            </div>
             <a href="https://aws.at" target="blank">
               <AWS
                 src={AwsLogo}

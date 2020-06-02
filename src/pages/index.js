@@ -19,7 +19,7 @@ const Container = styled.div`
   position: relative;
   margin: 0;
   color: #fbc707;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     grid-template-columns: auto;
     padding-bottom: 3rem;
   }
@@ -89,9 +89,10 @@ const IndexPage = () => (
         Das erste transparente Spenden- und Impact Tracking-System
       </Headline>
       <BodyText>
-        Token4Hope greift das Problem fehlender Transparenz und
-        Nachverfolgbarkeit von Spenden auf und garantiert die sachgemäße
-        Verwendung des Geldes zu dessen vorgesehenen Zweck.
+        Token4Hope löst das Problem mangelnder Transparenz und
+        Nachverfolgbarkeit von Spenden mithilfe der Blockchain-Technologie und
+        garantiert die sachgemäße Verwendung des gespendeten Geldes zu dessen
+        vorgesehenem Zweck.
       </BodyText>
       <CTA>KNOW & SHOW YOUR IMPACT</CTA>
 

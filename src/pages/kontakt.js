@@ -20,9 +20,11 @@ const Container = styled.div`
   width: 90%;
   min-height: 80vh;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   color: #fbc707;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
+    position: static;
+    max-width: 90%;
     grid-template-columns: 1fr;
     grid-gap: 0.2rem;
   }
@@ -34,7 +36,7 @@ const Headline = styled.h2`
   font-size: 3rem;
   font-weight: 300;
   padding-bottom: 2rem;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     grid-column: 1;
     font-size: 2rem;
     justify-self: start;
@@ -47,15 +49,19 @@ const BodyText = styled.p`
   font-weight: 100;
   font-size: 1.4rem;
   padding-bottom: 2rem;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     grid-column: 1;
+    font-size: 1.1rem;
+    white-space: normal;
+    width: 90%;
+    margin: 0 auto;
   }
 `
 
 const MailSpan = styled.span`
   grid-row: 3;
   grid-column: 2;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     grid-column: 1;
   }
 `
@@ -67,7 +73,7 @@ const LinkStyled = styled.a`
   justify-content: right;
   padding: 1rem;
   vertical-align: top;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     font-size: 1rem;
     padding: 0.2rem;
     justify-self: start;
@@ -80,7 +86,7 @@ const Partners = styled.h3`
   font-size: 3rem;
   font-weight: 300;
   padding-bottom: 2rem;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     grid-column: 1;
     font-size: 2rem;
     justify-self: start;
@@ -93,12 +99,15 @@ const PartnerContainer = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, auto);
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     grid-column: 1;
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
     justify-items: center;
     padding-bottom: 3rem;
+    img {
+      max-width: 300px;
+    }
   }
 `
 
@@ -108,8 +117,10 @@ const Kontakt = props => (
     <Container>
       <Headline>Kontakt</Headline>
       <BodyText>
-        Teilen Sie uns Ihr Anliegen mit - Bei Interesse freuen wir uns über Ihre
-        persönliche Anfrage
+        Haben Sie Interesse Ihre CSR Aktivitäten zu erweitern,
+        <br /> oder sind im Charity Bereich tätig?
+        <br />
+        Dann freuen wir uns auf Ihre persönliche Anfrage!
       </BodyText>
       <MailSpan>
         {isMobile ? (

@@ -18,7 +18,7 @@ const HeaderContainer = styled.div`
     vertical-align: middle;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     grid-template-columns: 80px 65px auto;
     grid-gap: 0rem;
     img {
@@ -42,7 +42,7 @@ const SiteTitleStyled = styled(Link)`
   text-transform: uppercase;
   margin-left: 1rem;
   vertical-align: middle;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     font-size: 1rem;
     margin-left: 0px;
   }
