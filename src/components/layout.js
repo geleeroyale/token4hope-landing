@@ -104,6 +104,10 @@ const AWS = styled.img`
 const Content = styled.main`
   position: relative;
   z-index: 100;
+  @media (max-width: 650px) {
+    display: grid;
+    justify-content: center;
+  }
 `
 
 const Layout = ({ children }) => {

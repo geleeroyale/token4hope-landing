@@ -10,15 +10,15 @@ const Container = styled.div`
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto;
   grid-gap: 1rem;
-  align-content: center;
   place-items: center;
   position: relative;
-  margin: 0;
   color: #fbc707;
   min-height: 70vh;
+  padding-bottom: 3rem;
   @media (max-width: 650px) {
     grid-template-columns: auto;
-    padding-bottom: 3rem;
+    position: static;
+    padding-right: 1rem;
   }
 `
 
@@ -44,6 +44,11 @@ const CTA = styled.h3`
   grid-column: 2;
   font-weight: 700;
   font-size: 3rem;
+  margin: 0.5rem 0;
+  @media (max-width: 650px) {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
 `
 
 const CTAButton = styled.button`
@@ -57,6 +62,11 @@ const CTAButton = styled.button`
   border: 0;
   border: 1px solid #fbc707;
   border-radius: 20px;
+
+  @media (max-width: 650px) {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
 
   :hover,
   :focus {
