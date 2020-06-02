@@ -38,6 +38,7 @@ const Headline = styled.h2`
     grid-column: 1;
     font-size: 2rem;
     justify-self: start;
+    padding-left: 1rem;
   }
 `
 
@@ -90,6 +91,7 @@ const Partners = styled.h3`
     grid-column: 1;
     font-size: 2rem;
     justify-self: start;
+    padding-left: 1rem;
   }
 `
 
