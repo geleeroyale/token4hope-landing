@@ -23,7 +23,6 @@ const Container = styled.div`
   color: #fbc707;
   @media (max-width: 650px) {
     position: static;
-    max-width: 90%;
     grid-template-columns: 1fr;
     grid-gap: 0.2rem;
   }
