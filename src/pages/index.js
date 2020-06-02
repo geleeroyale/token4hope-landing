@@ -5,8 +5,6 @@ import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
-import "../components/clear.css"
-
 const Container = styled.div`
   display: grid;
   grid-template-columns: auto 1fr auto;

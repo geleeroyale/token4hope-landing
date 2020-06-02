@@ -16,6 +16,7 @@ import CollectiveEnergyLogo from "../images/collective-energy-logo.png"
 import AwsLogo from "../images/aws-logo.png"
 
 import Header from "./header"
+import "../components/clear.css"
 
 const Global = styled.div`
   background-color: black;
