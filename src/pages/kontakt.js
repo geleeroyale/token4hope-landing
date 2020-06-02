@@ -57,8 +57,11 @@ const BodyText = styled.p`
 `
 
 const MailSpan = styled.span`
+  display: grid;
+  grid-template-columns: auto auto;
   grid-row: 3;
   grid-column: 2;
+  align-items: center;
   @media (max-width: 650px) {
     grid-column: 1;
   }
@@ -70,7 +73,6 @@ const LinkStyled = styled.a`
   font-size: 2rem;
   justify-content: right;
   padding: 1rem;
-  vertical-align: top;
   @media (max-width: 650px) {
     font-size: 1rem;
     padding: 0.2rem;
