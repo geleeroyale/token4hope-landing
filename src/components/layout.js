@@ -24,6 +24,11 @@ const Global = styled.div`
   z-index: 1;
   position: relative;
   min-height: 100vh;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 `
 
 const FingersImage = styled.img`
