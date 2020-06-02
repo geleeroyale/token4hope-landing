@@ -17,7 +17,6 @@ const Container = styled.div`
   grid-gap: 1rem;
   align-content: center;
   place-items: center;
-  width: 90%;
   min-height: 80vh;
   position: relative;
   margin: 0 auto;
