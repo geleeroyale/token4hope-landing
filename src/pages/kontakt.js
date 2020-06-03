@@ -21,6 +21,7 @@ const Container = styled.div`
   position: relative;
   margin: 0 auto;
   color: #fbc707;
+  padding-bottom: 3rem;
   @media (max-width: 650px) {
     position: static;
     grid-template-columns: 1fr;
