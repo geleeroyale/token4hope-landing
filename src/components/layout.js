@@ -150,8 +150,8 @@ const Layout = ({ children }) => {
           </span>
           <span className="footer-aws">
             <div>
-              Die Umsetzung erfolgt in Zusammenarbeit mit dem aws: Austria
-              Wirtschaftsservice{` `}
+              Die Umsetzung erfolgt durch Unterstützung des aws: Austria
+              Wirtschaftsservice {` `}
             </div>
             <a href="https://aws.at" target="blank">
               <AWS
