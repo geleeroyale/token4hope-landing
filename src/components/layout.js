@@ -167,11 +167,11 @@ const Layout = ({ children }) => {
       </Footer>
       <CookieConsent
         location='bottom'
-        buttonText='Accept'
-        declineButtonText='Decline'
+        buttonText='Akzeptieren'
+        declineButtonText='Nicht akzeptieren'
         cookieName='gatsby-gdpr-google-analytics'
       >
-        This site uses cookies ...
+        Diese Seite verwendet anonymisierte "Cookies" für Google Analytics.
       </CookieConsent>
     </Global>
   )
