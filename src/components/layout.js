@@ -5,18 +5,20 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "@emotion/styled"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import styled from '@emotion/styled'
 
-import CanvasTexture from "../images/creased-black-paper-texture.jpg"
-import Fingers from "../images/t4h-fingers.png"
-import CollectiveEnergyLogo from "../images/collective-energy-logo.png"
-import AwsLogo from "../images/aws-logo.png"
+import CookieConsent from 'react-cookie-consent'
 
-import Header from "./header"
-import "../components/clear.css"
+import CanvasTexture from '../images/creased-black-paper-texture.jpg'
+import Fingers from '../images/t4h-fingers.png'
+import CollectiveEnergyLogo from '../images/collective-energy-logo.png'
+import AwsLogo from '../images/aws-logo.png'
+
+import Header from './header'
+import '../components/clear.css'
 
 const Global = styled.div`
   background-color: black;
@@ -127,7 +129,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 960
         }}
       >
         <FingersImage src={Fingers} />
@@ -135,40 +137,48 @@ const Layout = ({ children }) => {
       </div>
       <Footer>
         <FooterContent>
-          <span className="footer-ce">
+          <span className='footer-ce'>
             <div>
               © {new Date().getFullYear()}, Ein Projekt von
               {` `}
             </div>
-            <a href="https://www.collective-energy.at" target="blank">
+            <a href='https://www.collective-energy.at' target='blank'>
               <img
                 src={CollectiveEnergyLogo}
-                alt="Collective Energy"
-                height="30px"
+                alt='Collective Energy'
+                height='30px'
               />
             </a>
           </span>
-          <span className="footer-aws">
+          <span className='footer-aws'>
             <div>
               Die Umsetzung erfolgt durch Unterstützung des aws: Austria
               Wirtschaftsservice {` `}
             </div>
-            <a href="https://aws.at" target="blank">
+            <a href='https://aws.at' target='blank'>
               <AWS
                 src={AwsLogo}
-                alt="Austria Wirtschaftsservice"
-                height="30px"
+                alt='Austria Wirtschaftsservice'
+                height='30px'
               />
             </a>
           </span>
         </FooterContent>
       </Footer>
+      <CookieConsent
+        location='bottom'
+        buttonText='Accept'
+        declineButtonText='Decline'
+        cookieName='gatsby-gdpr-google-analytics'
+      >
+        This site uses cookies ...
+      </CookieConsent>
     </Global>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
